@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <!-- Adding Bootstrap for better styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #555555;
+        }
+        .btn-primary {
+            width: 100%;
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Book</h1>
+        <form method="POST" action="{{ url_for('add_books') }}">
+            <div class="form-group">
+                <label for="bk_name">Book Name</label>
+                <input type="text" class="form-control" id="bk_name" name="bk_name" placeholder="Enter Book Name" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="bk_author">Author</label>
+                <input type="text" class="form-control" id="bk_author" name="bk_author" placeholder="Enter Author Name" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="bk_details">Book Details</label>
+                <textarea class="form-control" id="bk_details" name="bk_details" rows="3" placeholder="Enter Book Details" required></textarea>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="usr_name">User Name</label>
+                <input type="text" class="form-control" id="usr_name" name="usr_name" placeholder="Enter User Name" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="usr_class">User Class</label>
+                <input type="text" class="form-control" id="usr_class" name="usr_class" placeholder="Enter User Class" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="usr_num">User Number</label>
+                <input type="text" class="form-control" id="usr_num" name="usr_num" placeholder="Enter User Number" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4">Add Book</button>
+        </form>
+    </div>
+    
+    <!-- Optional: Adding Bootstrap's JS (for buttons, modals, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
